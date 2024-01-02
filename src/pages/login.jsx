@@ -1,10 +1,8 @@
-import logo from "../assets/logo.svg";
 import icon from "../assets/ph_lock-key-fill.svg";
 import envlop from "../assets/ph_envelope-simple-fill.svg";
 import tel from "../assets/telephone.png";
 import { Link } from "react-router-dom";
 import food from "../assets/minLOGO.png";
-
 
 export const Login = () => {
   return (
@@ -56,7 +54,9 @@ export const Login = () => {
               maxLength={10}
             />
           </div>
-          <button className="btn btn-primary mt-6">Login</button>
+          <button className="btn bg-red-500 mt-6">
+            <Link to="/Menu">Login</Link>
+          </button>
           <div className=" mb-10">
             <span className=" text-gray-500 mt-2 text-sm">
               Don't have an account?
@@ -65,7 +65,6 @@ export const Login = () => {
               Create account
             </Link>
           </div>
-
         </div>
       </div>
     </>

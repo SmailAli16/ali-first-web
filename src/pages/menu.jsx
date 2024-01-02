@@ -12,7 +12,7 @@ const Menu = () => {
   return (
     <div className=" flex flex-col mt-[-00px]  h-screen w-full">
       {/* <img src={bgMenu} alt="" className=" h-[500px]" /> */}
-      <button className=" h-16 btn btn-error text-xl  mx-8 justify-center">
+      <button className=" h-16 btn btn-error text-xl  m-8 justify-center">
         Menu
       </button>
       <div className=" mt-5 flex gap-5 h-hull justify-center  items-center">
@@ -62,50 +62,35 @@ const Menu = () => {
         </div>
       </form>
       <div className=" flex justify-center mt-10 flex-wrap  ">
-        <div className=" bg-gray-500  cart w-1/5 flex-wrap text-left m-2 p-2 h-[520px] border border-black rounded-lg  ">
+        <p className=" text-xl m-20">
+          Thousands of items delivered to your door: <span className="text-2xl text-red-600">foodora Market</span>{" "}
+          market is Sweden's lightning-fast online supermarket. Order groceries,
+          fresh fruit & vegetables, sweet & savory snacks, beverages as well as
+          household products and have everything delivered within just 15
+          minutes. Discover our rapidly growing offer and order conveniently at
+          supermarket prices!
+        </p>
+
+        <div className=" bg-gray-500  cart w-1/5 flex-wrap text-left m-2 p-2 h-[500px] border border-black rounded-lg  ">
           <img src={I1} alt="" />
           <h1 className=" text-base-300 text-lg font-bold m-2">
             title images n1
           </h1>
-          <p className=" text-base-300"> le temp est 15 mnt</p>
+          <p className=" p-2 text-base-300"> le temp est <span className="text-xl  text-red-800">15 mnt</span></p>
           <label htmlFor="">prix = </label>
-          <button className="btn btn-link bg-[#]">
+          <button className="btn btn-outline ">
             300$ <span className="  text-red-900 line-through ">200$</span>
           </button>
-          <div className=" flex flex-col gap-2 my-3 ">
-            <button className="btn btn-error  w-1/2 "> <Link to="/info"> learn mor</Link></button>
-              
-            <button className="btn btn-success"> Ajoute</button>
+          <div className=" flex gap-1 my-3 ">
+            <button className="btn btn-outline  w-1/2 ">
+              <Link to="/info"> learn mor</Link>
+            </button>
+            <button className="btn btn-active btn-outline w-1/2 ">
+              {" "}
+              Ajoute
+            </button>
           </div>
-              </div>
-              <div className=" bg-gray-500  cart w-1/5 flex-wrap text-left m-2 p-2 h-[520px] border border-black rounded-lg  ">
-                <img src={I1} alt="" />
-                <h1 className=" text-base-300 text-lg font-bold m-2">title images n1</h1>
-                <p className=" text-base-300"> le temp est 15 mnt</p>
-                <label htmlFor="">prix = </label>
-                <button className="btn btn-link bg-[#]">
-                    300$ <span className="  text-red-900 line-through ">200$</span>
-                        </button>
-                        <div className=" flex flex-col gap-2 my-3 ">
-                            <button className="btn btn-error  w-1/2 "> <Link to="/info"> learn mor</Link></button>
-                            <button className="btn btn-success"> Ajoute</button>
-                        </div>
-                        
-              </div>
-              <div className=" bg-gray-500  cart w-1/5 flex-wrap text-left m-2 p-2 h-[520px] border border-black rounded-lg  ">
-                <img src={I1} alt="" />
-                <h1 className=" text-base-300 text-lg font-bold m-2">title images n1</h1>
-                <p className=" text-base-300"> le temp est 15 mnt</p>
-                <label htmlFor="">prix = </label>
-                <button className="btn btn-link bg-[#]">
-                    300$ <span className="  text-red-900 line-through ">200$</span>
-                        </button>
-                        <div className=" flex flex-col gap-2 my-3 ">
-                            <button className="btn btn-error  w-1/2 "> <Link to="/info"> learn mor</Link></button>
-                            <button className="btn btn-success"> <Link to="/ajouter"> Ajoute</Link></button>
-                        </div>
-                        
-             </div>
+        </div>
       </div>
     </div>
   );

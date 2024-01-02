@@ -5,6 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Menu from "./pages/menu.jsx";
 import Header from "./pages/header.jsx";
 import Home from "./pages/home.jsx";
+import Tecket from "./pages/tecket.jsx";
 import "./App.css";
 import Barre from "./pages/head Bar.jsx"
 import About from "./pages/about.jsx"
@@ -27,6 +28,7 @@ function App() {
         <Route path="/info" element={<Info />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Tecket" element={<Tecket />} />
       </Routes>
     </>
   );
