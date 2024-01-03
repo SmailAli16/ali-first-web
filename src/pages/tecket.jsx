@@ -6,7 +6,8 @@ const Tecket = () => {
     return (
       <div className="flex justify-center items-center my-10">
         <div className="border border-black flex flex-col justify-center items-start  h-full w-1/2 ">
-          <h1 className="ml-52 text-2xl font-bold">Foodra Market</h1>
+          <h1 className="ml-52 my-3 border-b-4   text-2xl font-bold text-red-700">Foodra Market
+          </h1>
           <p className="ml-44"> Addresse: vald'ydra alger</p>
           <p className="ml-44">telephon: 021 00 00 00</p>
           <p className="ml-20">

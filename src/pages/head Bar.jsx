@@ -29,12 +29,12 @@ const Barre = () => {
               <div className=" relative">
                 <li className="btn btn-primary btn-outline h-16 w-40 ml-32">
                   <Link to="/Login">Oreder Nows!</Link>
-                </li>
-                <Link to="/Tecket">
+                </li >
+                <Link to="/Tecket" >
                   <img
                     src={chario}
                     alt=""
-                    className=" h-16 w-16 absolute top-[1px] right-48"
+                    className=" h-16 w-16 absolute top-[1px] right-48 border-transparent hover:border-b-4 hover:border-b-lime-400"
                   />
                 </Link>
               </div>

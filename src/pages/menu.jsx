@@ -1,13 +1,156 @@
-import fodra from "../assets/fodra.png";
+import fodra from "../assets/foodra.png";
 import minLOGO from "../assets/minLOGO.png";
-import bgMenu from "../assets/bgMenu.png";
-import I1 from "../assets/1.png";
-import I2 from "../assets/2.png";
-import I3 from "../assets/3.png";
+import bgMenu from "/bgMenu.png";
+import I1 from "/1.png";
+import I2 from "/2.png";
+import I3 from "/3.png";
 import data from "../pages/Data.json";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Menu = () => {
+  const [eat, setEat] = useState([]);
+  const data = [
+    {
+      lien: "/1.png",
+      title: "salad and panini",
+      descreption: "very delesieuse ",
+      time: "10 mint",
+      price: "02 $",
+      lastPrice: "30$",
+      type: "asiatique",
+    },
+    {
+      lien: "/2.png",
+      title: " big djeez",
+      descreption: "so delesieuse",
+      time: "09 mint",
+      price: "05 $",
+      lastPrice: "30$",
+      type: "asiatique",
+    },
+    {
+      lien: "/3.png",
+      title: "djeez double",
+      descreption: "big djeez",
+      time: "12 mint",
+      price: "01 $",
+      lastPrice: "30$",
+      type: "asiatique",
+    },
+    {
+      lien: "/7boisson.png",
+      title: "boissons",
+      descreption: "Cocacola",
+      time: " now",
+      price: "06 $",
+      lastPrice: "30$",
+      type: "boissons",
+    },
+    {
+      lien: "/8.png",
+      title: "soup vegetarien ",
+      descreption: " very hot and delecieuse ",
+      time: "18 mint",
+      price: "03 $",
+      lastPrice: "30$",
+      type: "asiatique",
+    },
+    {
+      lien: "/9.png",
+      title: "bourak algerien ",
+      descreption: " piquon and hot ",
+      time: "13 mint",
+      price: "04 $",
+      lastPrice: "30$",
+      type: "bourak",
+    },
+    {
+      lien: "/10.png",
+      title: "salad vegetarien ",
+      descreption: " very healthy and delecieuse ",
+      time: "7 mint",
+      price: "2.03 $",
+      lastPrice: "30$",
+      type: "turque",
+    },
+    {
+      lien: "/11fruit.png",
+      title: "chiken delecieus  ",
+      descreption: " healthing and delecieuse ",
+      time: "16 mint",
+      price: "01.06 $",
+      lastPrice: "30$",
+      type: "indien",
+    },
+    {
+      lien: "/bbq.png",
+      title: "salad vegetarien ",
+      descreption: " very healthy and delecieuse ",
+      time: "10 mint",
+      price: "1.01 $",
+      lastPrice: "30$",
+      type: "Grillades",
+    },
+    {
+      lien: "/bgMenu.png",
+      title: " bg plat and salad vegetarien in table ",
+      descreption: " very healthy and delecieuse with boissent ",
+      time: "18 mint",
+      price: "5.08 $",
+      lastPrice: "30$",
+      type: "italien",
+    },
+    {
+      lien: "/double.png",
+      title: " double cheese burger",
+      descreption: " very healthy and delicious ",
+      time: " 09 mint",
+      price: "3.04 $",
+      lastPrice: "30$",
+      type: "burger",
+    },
+    {
+      lien: "/fish.png",
+      title: " fish with riz",
+      descreption: " very healthy and delicious ",
+      time: " 10mint",
+      price: "2.04 $",
+      lastPrice: "30$",
+      type: "asiatique",
+    },
+    {
+      lien: "/food berger.png",
+      title: " mini berger ",
+      descreption: " with vegetarien  ",
+      time: " 6 mint",
+      price: "1.02 $",
+      lastPrice: "30$",
+      type: "berger",
+    },
+    {
+      lien: "/mix berger.png",
+      title: " mini berger  with potatos and vegetarien and boissent",
+      descreption: "  very healthy   ",
+      time: " 6 mint",
+      price: "1.02 $",
+      lastPrice: "30$",
+      type: "berger",
+      type: "Mimiuo Pelle à Pizza en bambou"
+    },
+    {
+      lien: "/mix berger.png",
+      title: " PLAT PIZZA PERF MTA9EB 79-3 1ER CHOI ",
+      descreption: "  very healthy   ",
+      time: " 6 mint",
+      price: "250.00 DA",
+      lastPrice: "30$",
+      type: "berger",
+    },
+  ];
+   
+;
+
   // const data=data.img
   return (
     <div className=" flex flex-col mt-[-00px]  h-screen w-full">
@@ -15,84 +158,72 @@ const Menu = () => {
       <button className=" h-16 btn btn-error text-xl  m-8 justify-center">
         Menu
       </button>
-      <div className=" mt-5 flex gap-5 h-hull justify-center  items-center">
-        <button className="btn btn-primary  w-[45%]">search by category</button>
+      <div className=" mt-5 flex  h-hull justify-center  items-start">
+          <select name="" id="" className=" text-lg pt-3 flex justify-start items-start text-start btn btn-outline   focus: btn-error     w-1/2 h-10 rounded-xl text-black hover:border-b-4">
+            <option value="">All</option>
+            <option value="">pizza</option>
+            <option value="">burger</option>
+            <option value="">turque</option>
+            <option value="">pates</option>
+            <option value="">indien</option>
+            <option value="">asiatique</option>
+            <option value="">Tacos</option>
+            <option value="">kabab</option>
+            <option value="">syrien</option>
+            <option value="">street food</option>
+            <option value="">Grillades</option>
+            <option value="">italien</option>
+            <option value="">traditionel</option>
+            <option value="">sandwiches</option>
+            <option value="">Crêpes</option>
+            <option value="">Libanais</option>
+            <option value="">boissons</option>
+            <option value="">desserts</option>
+            <option value="">patisserie</option>
+          </select>
 
-        <button className="btn btn-primary  w-[45%]">search by title</button>
       </div>
 
-      <form className=" mt-10">
-        <label
-          for="default-search"
-          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-        >
-          Search
-        </label>
-        <div class="relative">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <svg
-              class="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
-          </div>
-          <input
-            type="search"
-            id="default-search"
-            class="block w-full p-4 ps-10 text-sm  border border-gray-300 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 text-darck dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search Mockups, Logos..."
-            required
-          />
-          <button
-            type="submit"
-            class=" text-blackl absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Search
-          </button>
-        </div>
-      </form>
+      
       <div className=" flex justify-center mt-10 flex-wrap  ">
         <p className=" text-xl m-20">
-          Thousands of items delivered to your door: <span className="text-2xl text-red-600">foodora Market</span>{" "}
-          market is Sweden's lightning-fast online supermarket. Order groceries,
-          fresh fruit & vegetables, sweet & savory snacks, beverages as well as
+          Thousands of items delivered to your door:{" "}
+          <span className="text-2xl text-red-600">foodora Market</span> market
+          is Sweden's lightning-fast online supermarket. Order groceries, fresh
+          fruit & vegetables, sweet & savory snacks, beverages as well as
           household products and have everything delivered within just 15
           minutes. Discover our rapidly growing offer and order conveniently at
           supermarket prices!
         </p>
-
-        <div className=" bg-gray-500  cart w-1/5 flex-wrap text-left m-2 p-2 h-[500px] border border-black rounded-lg  ">
-          <img src={I1} alt="" />
-          <h1 className=" text-base-300 text-lg font-bold m-2">
-            title images n1
-          </h1>
-          <p className=" p-2 text-base-300"> le temp est <span className="text-xl  text-red-800">15 mnt</span></p>
-          <label htmlFor="">prix = </label>
-          <button className="btn btn-outline ">
-            300$ <span className="  text-red-900 line-through ">200$</span>
-          </button>
-          <div className=" flex gap-1 my-3 ">
-            <button className="btn btn-outline  w-1/2 ">
-              <Link to="/info"> learn mor</Link>
-            </button>
-            <button className="btn btn-active btn-outline w-1/2 ">
-              {" "}
-              Ajoute
-            </button>
-          </div>
-        </div>
+        {data.map((key) => {
+          return (
+            <div className=" bg-gray-200  cart w-1/4 flex-wrap text-left m-10 p-4 h-[550px] border border-black rounded-lg  ">
+              <img src={key.lien} alt="" className="h-72 w-full" />
+              <h1 className="  text-xl font-bold m-2">{key.title}</h1><p>{ key.type}</p>
+              <p className=" p-2 ">
+                le temp est
+                <span className="text-xl  text-red-900"> {key.time}</span>
+              </p>
+              <label htmlFor="" className=" text-xl font-bold ">
+                prix =
+              </label>
+              <button className=" text-lg text-black ml-3 bg-[green] w-1/2 h-10 rounded-3xl ">
+                {key.price}
+              </button>
+              <div className=" flex gap-1 my-3 ">
+                <button className="btn btn-outline bg-red-600  w-1/2 ">
+                  <Link to="/info"> learn mor</Link>
+                </button>
+                <button className="btn  btn-outline btn-error w-1/2 ">
+                  Ajoute
+                </button>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
+
 export default Menu;
