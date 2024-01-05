@@ -5,36 +5,38 @@ import { Link } from "react-router-dom";
 const Barre = () => {
   return (
     <>
-      <div className="flex flex-col ">
-        <div className=" top-0 flex  justify-between items-center  ">
-          <div className="w-1/2 flex m">
+{/* <header class="fixed bg-blue-600 shadow-md  z-50 w-full px-5 py-2 flex justify-between items-center"> */}
+
+      <div className="flex  flex-col bg-[#444] ">
+        <div className="  flex  justify-between items-center  fixed   z-50 w-fill px-1 bg-[#333] w-full ">
+          <div className="w-1/2 flex ">
             <img src={food} alt="" />
           </div>
-          <div className="flex items-center justify-between gap-1 mb-8 ">
-            <ul className="flex gap-10 font-bold text-2xl m-10">
+          <div className="flex items-center justify-between   ">
+            <ul className="flex gap-10 font-bold text-2xl mt-">
               {/* <li className="btn"><Link to="/H">Home</Link></li> */}
-              <li className="  hover:border-b-lime-400 hover:border-b-2 ">
+              <li className=" text-white mt-5  mx-2 hover:border-b-lime-400 hover:border-b-2 ">
                 <Link to="/">Home</Link>
               </li>
-              <li className=" hover:border-b-lime-400 hover:border-b-2 ">
+              <li className="mt-5 mx-2 text-white hover:border-b-lime-400 hover:border-b-2 ">
                 <Link to="/Menu">Menu</Link>
               </li>
-              <li className=" hover:border-b-lime-400 hover:border-b-2 ">
+              <li className="mt-5 mx-2 text-white hover:border-b-lime-400 hover:border-b-2 ">
                 <Link to="/About">About </Link>
               </li>
-              <li className=" hover:border-b-lime-400 hover:border-b-2 ">
+              <li className="mt-5 mx-2 text-white hover:border-b-lime-400 hover:border-b-2 ">
                 <Link to="/Contact">Contact</Link>
               </li>
 
               <div className=" relative">
-                <li className="btn btn-primary btn-outline h-16 w-40 ml-32">
+                <li className="btn border-pink-600  btn-outline  hover:bg-pink-500 my-1 text-white h-16 w-40 ml-20">
                   <Link to="/Login">Oreder Nows!</Link>
-                </li >
-                <Link to="/Tecket" >
+                </li>
+                <Link to="/Tecket">
                   <img
                     src={chario}
                     alt=""
-                    className=" h-16 w-16 absolute top-[1px] right-48 border-transparent hover:border-b-4 hover:border-b-lime-400"
+                    className="text-base-100 h-16 w-16 absolute top-[1px] right-48 border-transparent hover:border-b-4 hover:border-b-lime-400"
                   />
                 </Link>
               </div>
@@ -42,12 +44,12 @@ const Barre = () => {
           </div>
         </div>
         <div className="bg-base-300">
-          <form className="  my-3 w-full h-16  px-2">
+          <form className="  mt-28 w-full h-16  px-2">
             <label
               for="default-search"
-              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              class="mb-8 text-lg font-medium text-gray-900 sr-only dark:text-white"
             >
-              Search
+              food find
             </label>
             <div class="relative">
               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -70,15 +72,15 @@ const Barre = () => {
               <input
                 type="search"
                 id="default-search"
-                class="block w-full p-4 ps-10 text-sm  border border-gray-800 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 text-darck dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="block w-full p-4 ps-10 text-lg  border border-gray-800 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 text-darck dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Search Mockups, Logos..."
                 required
               />
               <button
                 type="submit"
-                class=" text-blackl absolute end-2.5 bottom-2.5 bg-blue-300 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class=" text-blackl absolute end-2.5 bottom-2.5 bg-blue-100 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
-                Search
+                find Food
               </button>
             </div>
           </form>

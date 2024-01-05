@@ -4,19 +4,30 @@ import bgMenu from "/bgMenu.png";
 import I1 from "/1.png";
 import I2 from "/2.png";
 import I3 from "/3.png";
-import data from "../pages/Data.json";
+import data from "./Data.json";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Menu = () => {
   const [eat, setEat] = useState([]);
   const data = [
+    
+      {
+      lien: "/pizza italienne.png",
+      title: " plats les plus appréciés dans le monde entier",
+      descreption: "  very healthy   ",
+      time: " 10 mint",
+      price: "250.00 DA",
+      lastPrice: "300.00 DA",
+      type: "pizza",
+      Info:"La pizza italienne est l’un des plats les plus appréciés dans le monde entier, et c’est facile à comprendre avec sa combinaison parfaite de pâte croustillante, de sauce savoureuse et de toppings frais et savoureux. Si vous voulez essayer de préparer une pizza italienne traditionnelle vous-même, lisez cet article Souvenez-vous : la clé pour réussir une pizza italienne traditionnelle est d’utiliser des ingrédients de qualité et de prendre le temps de bien pétrir (et laisser reposer) la pâte. Il est bon de noter également qu’une pâte à pizza peut être de différents types, c’est à dire qu’il est possible de préparer une pizza à partir d’une pâte filo, de feuilles de brick, et même à partir de chou-fleur si vous souhaitez une alternative healthy et vegan !"
+    },
     {
       lien: "/1.png",
       title: "salad and panini",
       descreption: "very delesieuse ",
       time: "10 mint",
-      price: "02 $",
+      price: "02 €",
       lastPrice: "30$",
       type: "asiatique",
     },
@@ -55,6 +66,16 @@ const Menu = () => {
       price: "03 $",
       lastPrice: "30$",
       type: "asiatique",
+    },
+    {
+      "lien": "/pepperoni pizza.png",
+      "title": " PLAT PIZZA PERF MTA9EB 79-3 1ER CHOI ",
+      "descreption": "  very healthy   ",
+      "time": " 6 mint",
+      "price": "250.00 DA",
+      "lastPrice": "30$",
+      "type": "berger",
+      "Info":"savoureux pepperoni pizza et ingrédients de cuisine tomates basilic sur fond de béton noir. Vue de dessus de pizza pepperoni chaud.Avec espace de copie pour le texte. Pose plate. Bannière. — Image de vasiliybudarin"
     },
     {
       lien: "/9.png",

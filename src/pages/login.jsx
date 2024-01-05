@@ -54,7 +54,7 @@ export const Login = () => {
               maxLength={10}
             />
           </div>
-          <button className="btn bg-red-500 mt-6">
+          <button className="btn bg-pink-500 hover:bg-pink-800 mt-6">
             <Link to="/Menu">Login</Link>
           </button>
           <div className=" mb-10">
