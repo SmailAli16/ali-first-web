@@ -10,7 +10,7 @@ import { useState } from "react";
 
 const Menu = () => {
   const [eat, setEat] = useState(data);
-    const [search, setSearch] = useState("All");
+    const [search, setSearch] = useState("");
     const [repas, setRepas] = useState("All");
 
   
@@ -19,79 +19,43 @@ const Menu = () => {
   return (
     <div className=" flex flex-col mt-[-00px]  h-screen w-full">
       {/* <img src={bgMenu} alt="" className=" h-[500px]" /> */}
-      <button className=" h-16 btn btn-error text-xl  m-8 justify-center">
+      <button className=" h-16 w-9/10 btn btn-error text-xl  m-8 justify-center">
         Menu
       </button>
-      <div className=" mt-5 flex  h-hull justify-center  items-start">
-          <select name="" id="" className=" text-lg pt-3 flex justify-start items-start text-start btn btn-outline   focus: btn-error     w-1/2 h-10 rounded-xl text-black hover:border-b-4">
-            <option value={repas} onClick={() => {
+      <div className="  flex h-[40px] m-full justify-center items-center gap-2  ">
+         
+        <div><button className="btn btn-outline bg-red-600 " value={repas} onClick={() => {
               setRepas("All");
-            }}>All</option>
-            <option value={repas} onClick={() => {
+            }}>All</button></div>
+        <div><button className="btn btn-outline" value={repas} onClick={() => {
               setRepas("pizza");
-            }}>pizza</option>
-            <option value={repas} onClick={() => {
-              setRepas("burger");
-            }}>burger</option>
-            <option value={repas} onClick={() => {
-              setRepas("turque");
-            }}>turque</option>
-            <option value={repas} onClick={() => {
-              setRepas("pates");
-            }}>pates</option>
-            <option value={repas} onClick={() => {
-              setRepas("indien");
-            }}>indien</option>
-            <option value={repas}  onClick={() => {
-              setRepas("asiatique");
-            }}>asiatique</option>
-            <option value={repas} onClick={() => {
-              setRepas("tacos");
-            }}>Tacos</option>
-            <option value={repas} onClick={() => {
-              setRepas("kabab");
-            }}>kabab</option>
-            <option value={repas} onClick={() => {
-              setRepas("syrien");
-            }}>syrien</option>
-            <option value={repas} onClick={() => {
-              setRepas("street food");
-            }}>street food</option>
-            <option value={repas} onClick={() => {
-              setRepas("grillades");
-            }}>Grillades</option>
-            <option value={repas} onClick={() => {
+            }}>pizza</button></div>
+        <div><button className="btn btn-outline" value={repas} onClick={() => {
+              setRepas("pasta");
+            }}>pasta</button></div>
+        <div><button className="btn btn-outline" value={repas} onClick={() => {
               setRepas("italien");
-            }}>italien</option>
-            <option value={repas}  onClick={() => {
-              setRepas("traditionel");
-            }}>traditionel</option>
-            <option value={repas} onClick={() => {
-              setRepas("sandwiches");
-            }}>sandwiches</option>
-            <option value={repas} onClick={() => {
-              setRepas("crepes");
-            }}>Crêpes</option>
-            <option value={repas} onClick={() => {
-              setRepas("libanais");
-            }}>Libanais</option>
-            <option value={repas}  onClick={() => {
-              setRepas("boissons");
-            }}>boissons</option>
-            <option value={repas}  onClick={() => {
-              setRepas("desserts");
-            }}>desserts</option>
-            <option value={repas} onClick={() => {
-              setRepas("patisserie");
-            }}>patisserie</option>
-          </select>
+            }}>italien</button></div>
+        <div  className="btn btn-outline hover:border-b-2 hover:border-b-red-300"  ><button value={repas} onClick={() => {
+              setRepas("turque");
+            }}>turque</button></div>
+        <div><button className=" btn btn-outline" value={repas} onClick={() => {
+              setRepas("asiatique");
+            }}>asiatique</button></div>
+        <div><button className=" btn btn-outline"value={repas} onClick={() => {
+              setRepas("burger");
+            }}>burger</button></div>
+        <div><button className="btn btn-outline" value={repas} onClick={() => {
+              setRepas("boissent");
+            }}>boissent</button></div>
+        
 
       </div>
 
       
       <div className=" flex justify-center mt-10 flex-wrap  ">
         <p className=" text-xl m-20">
-          Thousands of items delivered to your door:{" "}
+          Thousands of items delivered to your door
           <span className="text-2xl text-red-600">foodora Market</span> market
           is Sweden's lightning-fast online supermarket. Order groceries, fresh
           fruit & vegetables, sweet & savory snacks, beverages as well as
@@ -99,10 +63,10 @@ const Menu = () => {
           minutes. Discover our rapidly growing offer and order conveniently at
           supermarket prices!
         </p>
-        {data.map((key,i) => {
-                      // if (
-                      //   (key.type.toLowerCase().includes(search.toLowerCase()) &&repas == "All") ||repas == key.type
-                      // )
+        {eat.map((key,i) => {
+                      if (
+                        (key.type.toLowerCase().includes(search.toLowerCase()) && repas == "All") ||repas == key.type
+                      )
                         return (
                           <div className=" bg-gray-200 gap-10  cart w-1/4 flex-wrap text-left m-10 p-4 h-screen border border-black rounded-lg  ">
                             <img
@@ -127,7 +91,7 @@ const Menu = () => {
                               {key.price}
                             </button>
                             <div className=" flex gap-1 my-10 ">
-                              <button className="btn btn-outline bg-red-600  w-1/2 ">
+                              <button className="btn btn-outline  w-1/2 ">
                                 <Link to="/info"> learn mor</Link>
                               </button>
                               <button className="btn  btn-outline btn-error w-1/2 ">

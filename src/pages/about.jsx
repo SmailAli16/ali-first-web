@@ -34,9 +34,7 @@ const About = () => {
           <img src={image} alt="" />
         </div>
       </div>
-      <footer className=" bg-[#444] h-screen w-full text-white p-10">
-        <p>Copyright © 2023 foodora</p>
-      </footer>
+      
     </>
   );
 };

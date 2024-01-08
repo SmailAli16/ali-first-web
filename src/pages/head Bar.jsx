@@ -4,95 +4,45 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Barre = () => {
-  const [search,setSearch]=useState()
+  const [search, setSearch] = useState()
   return (
     <>
-      {/* <header class="fixed bg-blue-600 shadow-md  z-50 w-full px-5 py-2 flex justify-between items-center"> */}
+      
 
-      <div className="flex  flex-col bg-[#444] ">
-        <div className="  flex  justify-between items-center  fixed   z-50 w-fill px-1 bg-[#333] w-full ">
-          <div className="w-1/2 h-20 flex ">
-            <img src={food} alt="" />
-          </div>
-          <div className="flex items-center justify-between">
-            <ul className="flex gap-10 font-bold text-2xl mt-">
-              {/* <li className="btn"><Link to="/H">Home</Link></li> */}
-              <li className=" text-gray-300 hover:text-base-200 mt-5  mx-2 hover:border-b-lime-400 hover:border-b-2 ">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="mt-5 mx-2 text-gray-300 hover:text-base-200 hover:border-b-lime-400 hover:border-b-2 ">
-                <Link to="/Menu">Menu</Link>
-              </li>
-              <li className="mt-5 mx-2 text-gray-300 hover:text-base-200 hover:border-b-lime-400 hover:border-b-2 ">
-                <Link to="/About">About </Link>
-              </li>
-              <li className="mt-5 mx-2 text-gray-300 hover:text-base-200 hover:border-b-lime-400 hover:border-b-2 ">
-                <Link to="/Contact">Contact</Link>
-              </li>
-
-              <div className=" relative">
-                <li className="btn border-pink-600  btn-outline  hover:bg-pink-500 my-1 text-white h-16 w-40 ml-20">
-                  <Link to="/Login">Oreder Nows!</Link>
-                </li>
-                <Link to="/Tecket">
-                  <img
-                    src={chario}
-                    alt=""
-                    className="text-gray-300 hover:text-base-200 h-16 w-16 absolute top-[1px] right-48 border-transparent hover:border-b-4 hover:border-b-lime-400"
-                  />
-                </Link>
-              </div>
-            </ul>
-          </div>
-        </div>
-        <div className="bg-base-300">
-          <form className="  mt-28 w-full h-16  px-2">
-            <label
-              for="default-search"
-              class="mb-8 text-lg font-medium text-gray-900 sr-only dark:text-white"
-            >
-              food find
-            </label>
-            <div class="relative">
-              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg
-                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
-              </div>
-              <input
-                type="search"
-                id="default-search"
-                class="block w-full p-4 ps-10 text-lg  border border-gray-800 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 text-darck dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Search Mockups, Logos..."
-                value={search}
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                }}
-                required
-              />
-              <button
-                type="submit"
-                class=" text-blackl absolute end-2.5 bottom-2.5 bg-blue-100 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                find Food
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <Link to="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"/>
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FOODRA <span className=" btn-outline text-white bg-none">Market</span></span>
+  </Link>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><Link to="/Menu">Order Now</Link></button>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li>
+        <Link to="/Home" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</Link>
+      </li>
+      <li>
+        <Link to="/Menu" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Menu</Link>
+      </li>
+      <li>
+        <Link to="About" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">about</Link>
+      </li>
+      <li>
+        <Link to="Contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</Link>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
     </>
-  );
-};
+  )
+}
 export default Barre;

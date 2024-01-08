@@ -28,7 +28,7 @@ const Header = () => {
             </button>
           </div>
 
-          <p className=" h-full m-full absolute left-[550px] top-[460px] text-white text-right text-2xl font-bold ">
+          <p className=" h-20 m-full absolute left-[550px] top-[460px] text-white text-right text-2xl font-bold ">
             A progression of rare and beautiful ingredients where texture . <br />
             flavour and harmony is paramount.
           </p>

@@ -83,15 +83,7 @@ const Contact = () => {
         </div>
         
         
-        <footer className=" text-white bg-[#222] h-screen w-full my-11 p-14">
-          <p>
-            appearance engagements, press and partnership opportunities, please
-            contact: is built on the three foundation pillars of offering unique
-            dining experiences, discovering and championing emerging talent and
-            supporting local producers.
-          </p>
-          <p>Copyright © 2023 foodora</p>
-        </footer>
+        
       </div>
     );
 }
