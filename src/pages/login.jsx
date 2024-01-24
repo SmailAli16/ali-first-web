@@ -3,12 +3,14 @@ import envlop from "../assets/ph_envelope-simple-fill.svg";
 import tel from "../assets/telephone.png";
 import { Link } from "react-router-dom";
 import food from "../assets/minLOGO.png";
+import Header from "./header.jsx";
 
 export const Login = () => {
-  
+
   return (
     <>
       <div className="main ml-[300px] mr-[300px] mt-10  gap-4 p-2 flex flex-col ">
+        <Header></Header>
         <div className="flex items-center m-auto ">
           <img src={food} alt="" className="boder rounded-3xl h-16 w-full" />
         </div>

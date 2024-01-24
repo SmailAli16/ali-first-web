@@ -10,7 +10,7 @@ import food from "../assets/minLOGO.png";
 const Contact = () => {
     return (
       <div>
-        <div className="main ml-[300px] mr-[300px] mt-10  gap-4 p-2 flex flex-col ">
+        <div className="main ml-[300px] mr-[300px] mt-20  gap-4 p-2 flex flex-col ">
           <div className="flex items-center m-auto ">
             <img src={food} alt="" className="boder rounded-3xl h-16 w-full" />
           </div>

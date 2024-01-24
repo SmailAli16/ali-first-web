@@ -7,31 +7,33 @@ import Header from "./pages/header.jsx";
 import Home from "./pages/home.jsx";
 import Tecket from "./pages/tecket.jsx";
 import "./App.css";
-import Barre from "./pages/head Bar.jsx"
-import About from "./pages/about.jsx"
-import Contact from "./pages/contactUS.jsx"
-import Info from "./pages/info.jsx"
-import Login from "./pages/login.jsx"
-import Fouter from "./pages/fouter.jsx"
+import Barre from "./pages/head Bar.jsx";
+import About from "./pages/about.jsx";
+import Contact from "./pages/contactUS.jsx";
+import Info from "./pages/info.jsx";
+import Login from "./pages/login.jsx";
+import Fouter from "./pages/fouter.jsx";
+import { CartProvider } from "./CartContext.jsx";
 // import About from "../src/";
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
     <>
-      <Barre />
-      <Header />
+      <CartProvider>
+        <Barre />
+        <Routes>
+          {/* <Route path="/H" element={<Header />} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Menu" element={<Menu />} />
+          <Route path="/info/:produit" element={<Info />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Tecket" element={<Tecket />} />
+        </Routes>
+      </CartProvider>
 
-      <Routes>
-        {/* <Route path="/H" element={<Header />} /> */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/Menu" element={<Menu />} />
-        <Route path="/info" element={<Info />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Tecket" element={<Tecket />} />
-      </Routes>
       <Fouter />
     </>
   );

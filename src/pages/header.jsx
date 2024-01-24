@@ -1,12 +1,12 @@
 import backg from "../assets/6.png";
 import hover from "../assets/hover.png";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Header = () => {
  
 
   return (
-    <div className=" flex flex-col h-screen">
+    <div className=" flex flex-col h-screen mt-20">
       <div className=" relative  h-screen ">
         <img
           src={backg}
