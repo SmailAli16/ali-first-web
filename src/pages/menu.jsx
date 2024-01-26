@@ -5,8 +5,8 @@ import data from "./data";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
-import Header from "./header";
 import Tecket from "./tecket";
+import { useEffect } from "react";
 import { useContext } from "react";
 import { CartContext } from "../CartContext";
 
@@ -21,17 +21,18 @@ const Menu = () => {
 
   const products = data;
 
-  const productItem = ({ productId }) => {
-    const { addIthemToCart } = useContext(PanierContext);
-  };
+  useEffect(() => {
+    window.scrollY = 0;
+    window.scrollBy(-9999, -999999);
+  }, []);
+
+
 
   // Fonction pour ajouter un produit au panier
 
   return (
     <div className=" flex flex-col w-full">
-      <Header />
 
-      {/* <img src={bgMenu} alt="" className=" h-[500px]" /> */}
       <button className=" h-16 w-9/10 btn btn-error text-xl  m-4 justify-center">
         Menu
       </button>
@@ -145,28 +146,31 @@ const Menu = () => {
             repas == key.type
           )
             return (
-              <div className=" bg-gray-100 gap-10  cart w-1/4 flex-wrap text-left m-10 p-3 h-[650px] border border-black rounded-lg">
+              <div className="cart shadow-xl bg-gray-200 gap-4 w-1/4 flex-wrap text-left m-5 p-4 my-10 h-[700px] border rounded-lg">
                 <img
                   src={key.lien}
                   alt=""
-                  className="h-64 rounded-2xl w-full hover:h-[280px] hover:w-[390px] object-cover"
+                  className="h-2/3 rounded-2xl w-full  object-cover"
                 />
-                <h1 className=" max-h-min-[10px]:  text-xl font-bold m-2">
-                  {key.title}
-                </h1>
-                <p className=" uppercase">*{key.type}*</p>
-                <p className=" my-4 ">
-                  <span className=" text-gray-500">le temp est</span>
-                  <span className="text-xl  mx-5 underline  text-red-900">
-                    {key.time}
-                  </span>
-                </p>
-                <label htmlFor="" className=" text-lg font-bold ">
-                  prix =
-                </label>
-                <button className=" my-4 text-lg text-black ml-3 bg-green-300 w-1/2 h-10 rounded-3xl hover:text-xl ">
-                  {key.price}
-                </button>
+                <div className="flex justify-between items-center">
+                  <h1 className=" mr-4  text-xl font-bold my-2">
+                    {key.name}
+                  </h1>
+                  <p className=" uppercase">*{key.type}*</p>
+                </div>
+                <div className="flex justify-between text-center">
+                  <p className=" my-4 ">
+                    <span className=" text-gray-500">tempt=</span>
+                    <span className="text-xl   underline  text-red-800">
+                      {key.time}
+                    </span>
+                  </p>
+
+                  <button className=" my-4 text-lg text-black ml-3 bg-green-200 w-1/2 h-10 rounded-3xl hover:text-xl ">
+                    {key.price}
+                  </button>
+                </div>
+
                 <div className=" flex justify-between  items-center text-center ">
                   <div className=" flex justify-start items-start m-auto">
                     <AiFillStar className=" text-[#d5af55]" />
@@ -176,9 +180,12 @@ const Menu = () => {
                     <AiFillStar className=" text-[#d5ab55]" />
                     <AiFillStar className=" text-[#d5ab55]" />
                   </div>
-                  <p className="text-red-400 m-auto">
+                  <p className="text-gray-500 m-auto">
                     {" "}
-                    <span className="text-xl">4</span> reviews
+                    <span className="text-xl">123</span>{" "}
+                    <span className="text-gray-400 hover:underline">
+                      reviews
+                    </span>
                   </p>
                 </div>
                 <div className=" flex gap-1 my-10 ">

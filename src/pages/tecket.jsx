@@ -24,6 +24,9 @@ const Tecket = () => {
       (subtotal, item) => subtotal + data[item.id].priceValue * item.count,
       0
     );
+    if (total > 1000) {
+      const remis = total* 0.05;
+    }
 
     setTotal(total);
     setCount(count);
@@ -33,6 +36,7 @@ const Tecket = () => {
     window.scrollY = 0;
     window.scrollBy(-9999, -999999);
   }, []);
+  const remis = ({ total } * 0.05);
 
   return (
     <div className="flex justify-center items-center pt-10 my-10">
@@ -44,18 +48,18 @@ const Tecket = () => {
         <p className="ml-44"> Addresse: vald'ydra alger</p>
         <p className="ml-44">telephon: 021 00 00 00</p>
         <p className="ml-20 text-">
-          **********************************************************
+          *******************************************************************
         </p>
         <p className="flex flex-col ml-20">
-          <span>table n-3</span>
+          <span>Table N = ..</span>
           <span> date 27-01-2024</span>
         </p>
         <p className="ml-20">
-          **********************************************************
+          *******************************************************************
         </p>
         <div className="flex flex-col gap-4">
           <ul className=" grid grid-cols-6 grid-flow-col  justify-around items-center gap-2 mx-2">
-            <li className="grid col-span-2 text-center text-lg font-bold">
+            <li className=" grid col-span-2 text-center text-lg font-bold">
               designation
             </li>
             <li className="grid col-span-1 text-center text-lg font-bold justify-center items-center ml-3">
@@ -76,7 +80,7 @@ const Tecket = () => {
             return (
               <ul className=" grid grid-cols-6 grid-flow-col w-full justify-around gap-2 mx-2">
                 <li className="col-span-2 gap-3 flex justify-start items-center text-lg">
-                  {produit.type}
+                  {produit.name}
                 </li>
                 <li className=" col-span-1">
                   <div className="flex">
@@ -117,16 +121,47 @@ const Tecket = () => {
         <p className="ml-20">
           _____________________________________________________________
         </p>
-        <p className="border border-1 text-xl font-medium grid grid-cols-4 justify-center m-full text-center">
-          SUB total ={total}
-        </p>
 
-        <p className="text-xl font-medium grid-cols-4 ">
-          tax ={(total * 17) / 100}
+        <div className=" grid grid-cols-6 ">
+          <div className="grid col-span-3 border  w-96 text-center text-lg font-bold">
+            <p>SUB total  </p>
+          </div>
+          <div>
+            <div className="grid col-span-3 border  text-center text-lg font-bold">
+              <p>{total}</p>
+            </div>
+          </div>
+        </div>
+        <div className=" grid grid-cols-6 ">
+          <div className="grid col-span-3 border  w-96 text-center text-lg font-bold">
+            <p>Tax </p>
+          </div>
+          <div>
+            <div className="grid col-span-3 border  text-center text-lg font-bold">
+              <p>{(total * 17) / 100} </p>
+            </div>
+          </div>
+        </div>
+        <div className=" grid grid-cols-6 ">
+
+          
+        </div>
+        <div className=" grid grid-cols-6 ">
+          <div className="grid col-span-3 border  w-96 text-center text-lg font-bold">
+            <p> Net a payer  </p>
+          </div>
+          <div>
+            <div className="grid col-span-3 border  text-center text-lg font-bold">
+              <p>{(total * 117) / 100}</p>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-xl ml-80 font-medium grid-cols-4 "></p>
+        <p className="text-xl ml-80 font-medium grid-cols-4 ">
+          {/* Remis=(if {total} <=1000) */}
         </p>
-        <p className="text-xl font-extrabold grid-cols-4">
-          net a payer = {(total * 117) / 100}
-        </p>
+        <p className="text-xl ml-80 font-extrabold grid-cols-4"></p>
       </div>
     </div>
   );

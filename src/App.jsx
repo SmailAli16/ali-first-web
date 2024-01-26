@@ -22,6 +22,7 @@ function App() {
     <>
       <CartProvider>
         <Barre />
+        <Header></Header>
         <Routes>
           {/* <Route path="/H" element={<Header />} /> */}
           <Route path="/" element={<Home />} />

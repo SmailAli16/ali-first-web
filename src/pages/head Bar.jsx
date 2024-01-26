@@ -9,6 +9,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { AiOutlineAmazon } from "react-icons/ai";
 import { useContext } from "react";
 import { CartContext } from "../CartContext";
+import { useEffect } from "react";
+
 
 const Barre = () => {
   const { items } = useContext(CartContext);
@@ -18,6 +20,10 @@ const Barre = () => {
     console.log("p", p);
     return p + c.count;
   }, 0);
+  useEffect(() => {
+    window.scrollY = 0;
+    window.scrollBy(-9999, -999999);
+  }, []);
 
   console.log("total", total);
 
@@ -29,7 +35,7 @@ const Barre = () => {
             <AiOutlineAmazon className=" text-6xl text-red-300 "></AiOutlineAmazon>
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               FOODRA
-              <span className=" btn-outline text-pink-800 bg-none hover:text-pink-400 ">
+              <span className=" btn-outline text-pink-800 bg-none hover:text-pink-600">
                 ITS_Market
               </span>
             </span>
@@ -88,7 +94,7 @@ const Barre = () => {
             <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <Link
-                  to="/Home"
+                  to="/"
                   className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                   aria-current="page"
                 >
