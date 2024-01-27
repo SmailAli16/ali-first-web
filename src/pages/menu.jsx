@@ -9,6 +9,8 @@ import Tecket from "./tecket";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { CartContext } from "../CartContext";
+import Typography from '@mui/material/Typography';
+
 
 const Menu = () => {
   const cartCtx = useContext(CartContext);
@@ -146,7 +148,7 @@ const Menu = () => {
             repas == key.type
           )
             return (
-              <div className="cart shadow-xl bg-gray-200 gap-4 w-1/4 flex-wrap text-left m-5 p-4 my-10 h-[700px] border rounded-lg">
+              <div className="cart shadow-2xl bg-gray-100 gap-4 w-1/4 flex-wrap text-left m-5 p-4 my-10 h-[700px] border rounded-lg  hover:border-black">
                 <img
                   src={key.lien}
                   alt=""

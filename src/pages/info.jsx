@@ -46,7 +46,7 @@ import { CartContext } from "../CartContext";
             {imagePath && <img src={imagePath} alt={"image clequee"} />}
           </div>
           <div className=" px-10 mt-10 m-full p-1 flex flex-col    gap-1 justify-center items-center  h-[500px] w-full ">
-            <div className="flex flex-col gap-5 text-3xl font-extralight h-96">
+            <div className="flex flex-col gap-5 text-3xl font-extralight h-96 border-3 p-10 border hover:border-black">
               <div className=" flex justify-start items-start m-  text-left text-sm">
                 <AiFillStar className=" text-[#d5af55]" />
                 <AiFillStar className=" text-[#d5ab55]" />
@@ -58,9 +58,9 @@ import { CartContext } from "../CartContext";
               </div>
 
               <div className=" text-3xl font-semibold">{imagName}....</div>
-              <div className=" font-normal ">{imagttip}</div>
+              <div className=" font-normal text-red-400 ">{imagttip}</div>
               <div>{imagType}</div>
-              <div className=" text-red-300  text-current">
+              <div className="   text-lg">
                 {imagdescreption}
               </div>
             </div>

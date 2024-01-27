@@ -39,8 +39,8 @@ const Tecket = () => {
   const remis = ({ total } * 0.05);
 
   return (
-    <div className="flex justify-center items-center pt-10 my-10">
-      <div className="border border-black flex flex-col justify-center items-start  h-full w-2/3 ">
+    <div className="flex justify-center items-center pt-10 m-10 w-full">
+      <div className="border border-black flex flex-col justify-center items-start  h-full w-3/3 ">
         <h1 className=" flex justify-center items-center ml-52 my-3 border-b-4   text-2xl font-bold text-red-700">
           <AiOutlineAmazon className="text-5xl text-red-200 hover:text-red-400" />{" "}
           Foodra ITS_Market
@@ -58,7 +58,7 @@ const Tecket = () => {
           *******************************************************************
         </p>
         <div className="flex flex-col gap-4">
-          <ul className=" grid grid-cols-6 grid-flow-col  justify-around items-center gap-2 mx-2">
+          <ul className=" grid grid-cols-6 grid-flow-col  justify-around items-center gap-10 mx-2">
             <li className=" grid col-span-2 text-center text-lg font-bold">
               designation
             </li>
@@ -68,7 +68,7 @@ const Tecket = () => {
             <li className="grid col-span-1 text-center text-lg font-bold">
               Prix U
             </li>
-            <li className="grid col-span-1 text-center text-lg font-bold">
+            <li className="grid col-span-2 ml-5 text-center text-lg font-bold">
               Montant
             </li>
             <li className="grid col-span-1 text-center text-lg font-bold">
@@ -78,7 +78,7 @@ const Tecket = () => {
           {cartctx.items.map((item, i) => {
             const produit = data[item.id];
             return (
-              <ul className=" grid grid-cols-6 grid-flow-col w-full justify-around gap-2 mx-2">
+              <ul className=" grid grid-cols-6 grid-flow-col w-full   mx-1 ">
                 <li className="col-span-2 gap-3 flex justify-start items-center text-lg">
                   {produit.name}
                 </li>
@@ -102,7 +102,7 @@ const Tecket = () => {
                 <li className=" col-span-1 justify-center items-center ">
                   {produit.priceValue}
                 </li>
-                <li className="grid col-span-1 justify-center items-center text-center">
+                <li className="grid col-span-2  items-center text-center">
                   {produit.priceValue * item.count}
                 </li>
                 <li className="grid col-span-1 items-center text-center">
@@ -122,36 +122,32 @@ const Tecket = () => {
           _____________________________________________________________
         </p>
 
-        <div className=" grid grid-cols-6 ">
-          <div className="grid col-span-3 border  w-96 text-center text-lg font-bold">
-            <p>SUB total  </p>
+        <div className=" grid grid-cols-6   ">
+          <div className="grid col-span-3    w-96 text-center text-lg font-bold">
+            <p>SUB total </p>
           </div>
           <div>
-            <div className="grid col-span-3 border  text-center text-lg font-bold">
+            <div className="grid col-span-3    text-center text-lg font-bold">
               <p>{total}</p>
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-6 ">
-          <div className="grid col-span-3 border  w-96 text-center text-lg font-bold">
+        <div className=" grid grid-cols-6  ">
+          <div className="grid col-span-3   w-96 text-center text-lg font-bold">
             <p>Tax </p>
           </div>
           <div>
-            <div className="grid col-span-3 border  text-center text-lg font-bold">
+            <div className="grid col-span-3   text-center text-lg font-bold">
               <p>{(total * 17) / 100} </p>
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-6 ">
-
-          
-        </div>
-        <div className=" grid grid-cols-6 ">
-          <div className="grid col-span-3 border  w-96 text-center text-lg font-bold">
-            <p> Net a payer  </p>
+        <div className=" grid grid-cols-6 border-1  mb-3">
+          <div className="grid col-span-3    w-96 text-center text-lg font-bold">
+            <p> Net a payer </p>
           </div>
           <div>
-            <div className="grid col-span-3 border  text-center text-lg font-bold">
+            <div className="grid col-span-3  text-center text-lg font-bold">
               <p>{(total * 117) / 100}</p>
             </div>
           </div>

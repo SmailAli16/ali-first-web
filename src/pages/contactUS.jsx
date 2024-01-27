@@ -1,15 +1,25 @@
 
 import image from "/2.png"
 import img from "/3.png"
+import imge from "/4.png"
 import icon from "../assets/ph_lock-key-fill.svg";
 import envlop from "../assets/ph_envelope-simple-fill.svg";
 import tel from "../assets/telephone.png";
 import { Link } from "react-router-dom";
 import food from "../assets/minLOGO.png";
+import { useEffect } from "react";
 import { AiOutlineAmazon } from "react-icons/ai";
 
 
 const Contact = () => {
+
+
+  useEffect(() => {
+    window.scrollY = 0;
+    window.scrollBy(-9999, -999999);
+  }, []);
+
+
     return (
       <div>
         <div className="main ml-[300px] mr-[300px] mt-20  gap-4 p-2 flex flex-col ">
@@ -81,10 +91,10 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex gap-10 justify-center items-center">
-          <div className="flex flex-col gap-4 m-10">
-            <img src={image} alt="" className="w-3/3 h-60 " />
-            <img src={img} alt="" className="w-3/3 h-60" />
-            <img src={img} alt="" className="w-1/1 h-60 " />
+          <div className="flex flex-col gap-4 m-10 object-cover">
+            <img src={image} alt="object-cover" className="w-3/3 h-60 " />
+            <img src={img} alt=" object-cover" className="w-3/3 h-60" />
+            <img src={imge} alt=" object-cover" className="w-1/1 h-60 " />
           </div>
           <div className=" flex flex-col gap-60">
             <p className=" h- w-2/3">

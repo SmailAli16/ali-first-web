@@ -31,7 +31,7 @@ const About = () => {
           </p>
         </div>
         <div>
-          <img src={image} alt="" />
+          <img src={image} alt=" best plat in the day" />
         </div>
       </div>
       
