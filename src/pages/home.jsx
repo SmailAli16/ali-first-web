@@ -26,13 +26,13 @@ const Home = () => {
   const eat = data;
   const array = ["boissent" , "turque" , "bourak"];
   return (
-    <>
+            <div className=" border-l border-r border-error  w-3/4 mx-72">
       {eat.map((key, i) => {
        
           return (
-            <>
-              <div className=" flex  gap-10 mt-16  ">
-                <div className=" flex flex-col mx-10 bg-gray-100">
+            <div className="">
+              <div className=" flex  gap-10 mt-16    mx-10 ">
+                <div className=" flex flex-col mx-52 bg-gray-100 w-2/3 ">
                   <div
                     className="  hover:border-2 hover:border-red-300
                     flex justify-center items-center my-1 py-2 gap-8 border border-base-300 p-10"
@@ -40,9 +40,9 @@ const Home = () => {
                     <img
                       src={key.lien}
                       alt=""
-                      className=" h-52 w-96 object-cover"
+                      className=" h-52 w-[600px] object-cover"
                     />
-                    <div className=" w-1/2">
+                    <div className=" w-1/3">
                       <p className="  w-2/2 ">{key.type}</p>
                       <p className="  w-2/2 ">{key.info}</p>
 
@@ -68,11 +68,11 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </>
+            </div>
           );
       })}
       
-    </>
+    </div>
   );
 };
 export default Home;
